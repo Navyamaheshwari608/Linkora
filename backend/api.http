@@ -1,0 +1,60 @@
+POST http://localhost:3000/register HTTP/1.1
+Content-Type: application/json
+
+{"name":"Rahul","username":"rahul","email":"rahul@gmail.com" ,"password":"rahul"}
+
+###
+
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{"email":"rahul@gmail.com" ,"password":"rahul"}
+
+###
+
+GET http://localhost:8080/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+###
+
+
+POST http://localhost:8080/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+  "_id": "6aa12c79b18421247dc7ea7d",
+  "userId": {
+    "_id": "6aa12c79b18421247dc7ea7c",
+    "name": "navya",
+    "username": "navya",
+    "email": "navyamaheshwari6789@gmail.com",
+    "profilePicture": "default.jpg"
+  },
+  "bio": "Hey there, Myself Navya Maheshwari",
+  "currentPost": "",
+  "pastWork": [{
+    "company":"Amazon",
+    "role":"SDE",
+    "years":2
+  }],
+  "education": [],
+  "__v": 0
+}
+
+###
+
+GET http://localhost:3000/user/get_all_users HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3000/user/download_resume?id=6aa0502f39531a0e46e883f5 HTTP/1.1
+
+
+###
+POST http://localhost:3000/delete_post HTTP/1.1
+Content-Type: application/json
+
+{
+  "token":"7f2c64ac858d4eb68169a9efdfda91cdbd51edf68c40f99af920f6320a4eea0f",
+  "post_id":"6aaf8d8fc3772cec539208b3"
+}

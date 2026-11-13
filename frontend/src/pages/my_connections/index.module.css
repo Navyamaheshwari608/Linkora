@@ -1,0 +1,36 @@
+.userCard {
+  display: flex;
+  width: 95%;
+  gap: 1.2rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  align-items: center;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.profilePicture > img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.connectedButton {
+  padding-inline: 0.8rem;
+  padding-block: 0.3rem;
+  outline: none;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  border-radius: 10px;
+  /* margin-bottom: 3rem; */
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .userCard {
+    height: 10vh;
+  }
+  .profilePicture > img {
+    width: 3rem;
+  }
+}
