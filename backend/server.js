@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://linkora-1-hnpz.onrender.com",
     credentials: true,
   }),
 ); //preventing from cors issue
