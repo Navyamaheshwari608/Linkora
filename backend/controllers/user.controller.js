@@ -73,8 +73,8 @@ export const register = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true, //cant be accessed by any other JS
-      secure: false, //true in production with HTTPS
-      sameSite: "lax",
+      secure: true, //true in production with HTTPS
+      sameSite: "none",
       maxAge: 48 * 60 * 60 * 1000,
     });
 
@@ -110,8 +110,8 @@ export const login = async (req, res) => {
     // return res.json({ message: "User logged in successfully" });
     res.cookie("token", token, {
       httpOnly: true, //cant be accessed by any other JS
-      secure: false, //true in production with HTTPS
-      sameSite: "lax",
+      secure: true, //true in production with HTTPS
+      sameSite: "none",
       maxAge: 24 * 60 * 60 * 1000,
     });
     return res.status(200).json({ message: "User logged in successfully" });
